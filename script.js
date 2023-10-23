@@ -32,18 +32,16 @@ function displayCards() {
 
     const row = table.insertRow(-1);
     row.innerHTML = `
-      <td style="display:flex; justify-content:center; border: none">
-        <img src="./image/masterCard.png" width="100px" height="60px">
-      </td>
-      <td>${maskedCardNumber}</td>
-      <td>${card.expiryDate}</td>
-      <td>${maskedCvv}</td>
-      <td>
-        <button onclick="editCard(${index})">Edit</button>
-        <button onclick="deleteCard(${index})">Delete</button>
-        <button onclick="viewCard(${index})">View</button>
-      </td>
-    `;
+            <td style="display:flex; justify-content:center; border: none"><img src="./image/masterCard.png" width="100px" height="60px" ></td>
+            <td>${maskedCardNumber}</td>
+            <td>${card.expiryDate}</td>
+            <td>${maskedCvv}</td>
+            <td>
+                <button onclick="editCard(${index})">Edit</button>
+                <button onclick="deleteCard(${index})">Delete</button>
+                <button onclick="viewCard(${index})">View</button>
+            </td>
+        `;
   });
 }
 
@@ -55,25 +53,25 @@ function maskCardNumber(cardNumber) {
 function maskCvv(cvv) {
   return "***";
 }
-// delete
+
 function deleteCard(index) {
   cards.splice(index, 1);
   displayCards();
 }
-// edit
+
 function editCard(index) {
   const card = cards[index];
   document.getElementById("cardNumber").value = card.cardNumber;
   document.getElementById("expiryDate").value = card.expiryDate;
   document.getElementById("cvv").value = card.cvv;
-  displayCards();
+  deleteCard(index); // Remove the old card when editing.
 }
-// view
+
 function viewCard(index) {
   const card = cards[index];
   alert(`Card Number: ${card.cardNumber}\nExpiry Date: ${card.expiryDate}\nCVV: ${card.cvv}`);
 }
-// validate
+
 function validateCardInput(cardNumber, expiryDate, cvv) {
   cardNumber = cardNumber.replace(/\s/g, '');
   if (!cardNumber || !/^\d{16}$/.test(cardNumber)) {
