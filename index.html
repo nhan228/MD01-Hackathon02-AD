@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-select">
+            <h1>Select Card</h1>
+
+            <div class="container-image">
+                <div class="image-box">
+                    <img src="./image/masterCard.png" class="active">
+                    <img src="./image/payPal.png">
+                    <img src="./image/visa.png">
+                    <img src="./image/americanExpress.png">
+                    <img src="./image/discoverCard.png">
+                </div>
+            </div>
+
+            <form id="cardForm">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" required>
+                <br>
+                <div class="row">
+                    <div class="row-box">
+                        <label for="expiryDate">Expiry Date (MM/YY):</label>
+                        <input type="text" id="expiryDate" placeholder=" MM/YY" required>
+                    </div>
+
+                    <div class="row-box">
+                        <label for="cvv">CVC/CVV:</label>
+                        <input type="text" id="cvv" required>
+                    </div>
+                </div>
+                <button type="button" onclick="saveCard()">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <table id="cardList">
+        <tr>
+            <th>Card Imgage</th>
+            <th>Card Number</th>
+            <th>Expiry Date</th>
+            <th>CVV</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+      
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+/* container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container-select {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+h1{
+    margin-bottom: 20px;
+}
+
+/* form */
+.container-imagae {
+    text-align: center; 
+    border-bottom: 1px solid  rgba(0,0,0,0.2);
+    padding-bottom: 20px;
+}
+
+.image-box {
+    white-space: nowrap;
+    position: relative;
+}
+
+.image-box img {
+    display: inline-block; 
+    width:90px;
+    height:50px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+    cursor: pointer;
+}
+#cardForm{
+    margin-top:30px
+}
+label{
+    display: block;
+    font-weight: 0;
+}
+#cardForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#cardForm label:nth-child(2),
+#cardForm input:nth-child(2),
+#cardForm label:nth-child(4),
+#cardForm input:nth-child(5) {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+#cardNumber,
+#expiryDate,
+#cvv
+{
+    margin-top: 10px;
+}
+
+/* button */
+#cardForm>button{
+    color: aliceblue;
+    background-color: rgb(59, 114, 223);
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/* table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+table,
+th,
+td {
+    text-align: center;
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 8px;
+}
+input{
+    height:30px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+td>button{
+    background-color: rgba(128, 128, 128, 0.579);
+    border:none;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+}
+td>button:hover{
+    cursor: pointer;
+    background-color:aquamarine;
+}
+/* active */
+.container-image {
+    position: relative!important;
+}
+
+.image-box {
+    position: relative!important;
+}
+
+.active {
+    border: 1.5px solid rgba(49, 95, 211, 0.2)!important; 
+    background-color: rgb(49, 95, 211,0.2);
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
